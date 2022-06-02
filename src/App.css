@@ -4,6 +4,8 @@ body {
 }
 .App {
   width: 100%;
+  max-width: 900px;
+  margin: auto;
   height: 100%;
 }
 .lower-section{
