@@ -13,7 +13,7 @@ const Console = () => {
 
     const update = (loop) => {
         let line = lines[lines.length - 1].props.children.toString()
-        if(textLines[lines.length - 1] && lines.length !== 5) {
+        if(textLines[lines.length - 1] && lines.length < 5) {
             line += textLines[lines.length - 1].charAt(loop - 1)
             if(loop - 1 < textLines[lines.length - 1].length){
                 window.setTimeout(() => {
@@ -33,6 +33,8 @@ const Console = () => {
                             <p key={1}>{'>'}Website Under Construction</p>,
                             <p key={2}>{'>'}Contact Info</p>,
                             <p key={3}>{'>'}seth@ths.ca</p>,
+                            <p key={2}>{'>'}LinkedIn Resume</p>,
+                            <p key={2}>{'>'}<a className='link' href='https://www.linkedin.com/in/seth-bondaroff-10963b171/'>https://www.linkedin.com/in/seth-bondaroff-10963b171/</a></p>,
                             <p key={4}>{'>'}</p>
                         ]
                         setLines([...newLines])
